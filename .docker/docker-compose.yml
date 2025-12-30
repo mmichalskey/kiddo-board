@@ -1,0 +1,29 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
+    container_name: kiddo-board-app
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    depends_on:
+      - db
+    mem_limit: 512m
+    cpus: 1.5
+
+  db:
+    image: postgres:18.1
+    container_name: kiddo-board-db
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    mem_limit: 512m
+    cpus: 1
+
+volumes:
+  postgres_data:

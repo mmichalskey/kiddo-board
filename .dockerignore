@@ -1,0 +1,21 @@
+# Ignore IDE files
+.idea/
+*.iml
+
+# Ignore Gradle caches and build outputs
+.gradle/
+build/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore Dockerfiles and compose in case you don't want to include local docker configs
+.docker/
+
+# Node modules etc (if present)
+node_modules/
+
+# Env files might be needed at runtime; include only if necessary
+.env
+

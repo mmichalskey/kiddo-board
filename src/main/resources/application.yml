@@ -1,0 +1,12 @@
+spring:
+    application:
+        name: kiddo-board
+    datasource:
+        url: jdbc:postgresql://localhost:5432/kiddoboard
+        username: kiddoboard
+        password: CHANGE_ME
+    flyway:
+        baseline-on-migrate: true 
+    jpa:
+        hibernate:
+            ddl-auto: none

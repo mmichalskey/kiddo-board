@@ -26,9 +26,11 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+    implementation "org.springframework.boot:spring-boot-starter-flyway"
 
     implementation "io.github.wimdeblauwe:htmx-spring-boot-thymeleaf:${htmxThymeleafVersion}"
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
@@ -37,6 +39,7 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
     runtimeOnly "org.postgresql:postgresql:${postgresVersion}"
+    runtimeOnly "org.flywaydb:flyway-database-postgresql:${flywayVersion}"
 
     testImplementation 'org.springframework.boot:spring-boot-starter-jdbc-test'
     testImplementation 'org.springframework.boot:spring-boot-starter-security-test'
